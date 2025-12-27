@@ -1,7 +1,37 @@
-![deploy](https://github.com/mahendraHegde/mahendrahegde.github.io/workflows/Node.js%20CI/badge.svg?branch=master)
+# Mahendra Kumar - Portfolio
 
----
+A modern, distinctive portfolio website built with React and Vite.
 
-This repo contains source code of my personal website.
+## 🚀 Tech Stack
 
-Visit [link](https://mahendrahegde.github.io/portfolio/) to view my portfolio.
+- **React 18** - UI Library
+- **Vite** - Build Tool
+- **Framer Motion** - Animations
+- **React Icons** - Icon Library
+- **pnpm** - Package Manager
+
+## 🛠️ Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start dev server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+## 🌐 Deployment
+
+The site is automatically deployed to GitHub Pages on every push to the `main` or `master` branch.
+
+Live site: [mahendrahegde.github.io/portfolio](https://mahendrahegde.github.io/portfolio)
+
+## 📄 License
+
+MIT

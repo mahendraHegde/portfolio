@@ -1,0 +1,116 @@
+.opensource__subtitle {
+    margin-top: var(--space-md);
+    font-size: 1.1rem;
+}
+
+.opensource__grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-3xl);
+}
+
+.opensource__card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-xl);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.opensource__card:hover {
+    border-color: var(--color-border-accent);
+    background: var(--color-bg-tertiary);
+}
+
+.opensource__card-number {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-accent-primary);
+    opacity: 0.6;
+    min-width: 36px;
+}
+
+.opensource__card-content {
+    flex-grow: 1;
+}
+
+.opensource__card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xs);
+    flex-wrap: wrap;
+}
+
+.opensource__card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.opensource__card-type {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-accent-secondary);
+    background: rgba(0, 180, 216, 0.1);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+.opensource__card-description {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.opensource__card-icon {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+
+.opensource__card:hover .opensource__card-icon {
+    opacity: 1;
+    color: var(--color-accent-primary);
+}
+
+.opensource__decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-xl);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.opensource__decoration-icon {
+    font-size: 1.5rem;
+    color: var(--color-accent-primary);
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .opensource__card {
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        padding: var(--space-md);
+    }
+
+    .opensource__card-number {
+        font-size: 1rem;
+        min-width: 28px;
+    }
+
+    .opensource__card-icon {
+        display: none;
+    }
+}

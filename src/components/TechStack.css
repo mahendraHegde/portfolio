@@ -1,0 +1,147 @@
+.stack__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.stack__category {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.stack__category--languages {
+    grid-column: 1 / -1;
+}
+
+.stack__category-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-primary);
+}
+
+.stack__category-icon {
+    font-family: var(--font-mono);
+    color: var(--color-accent-primary);
+    font-size: 0.875rem;
+}
+
+/* Languages with progress bars */
+.stack__languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-xl);
+}
+
+.language-bar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.language-bar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.language-bar__name {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+.language-bar__name svg {
+    color: var(--color-accent-primary);
+    font-size: 1.25rem;
+}
+
+.language-bar__value {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.language-bar__track {
+    height: 6px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.language-bar__fill {
+    height: 100%;
+    background: var(--color-accent-gradient);
+    border-radius: var(--radius-full);
+    position: relative;
+}
+
+.language-bar__fill::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Tech pills */
+.stack__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.tech-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    cursor: default;
+    transition: var(--transition-fast);
+}
+
+.tech-pill:hover {
+    border-color: var(--color-accent-primary);
+    color: var(--color-text-primary);
+    background: rgba(0, 212, 170, 0.05);
+}
+
+.tech-pill__icon {
+    font-size: 1.1rem;
+    color: var(--color-accent-primary);
+}
+
+.tech-pill__name {
+    font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+    .stack__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stack__languages {
+        grid-template-columns: 1fr;
+    }
+}
